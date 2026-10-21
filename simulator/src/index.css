@@ -1,0 +1,140 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6edf3;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.sub {
+  margin: 0;
+  color: #9fb0c3;
+  line-height: 1.45;
+}
+
+.status {
+  color: #9fb0c3;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+.status.up {
+  color: #3fb950;
+}
+.status.down {
+  color: #f85149;
+}
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 8px 2px;
+}
+
+.bubble {
+  max-width: 82%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: #1f6feb;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.bubble.assistant {
+  align-self: flex-start;
+  background: #161e2e;
+  border: 1px solid #26314a;
+  border-bottom-left-radius: 4px;
+}
+
+.bubble.dim {
+  opacity: 0.65;
+  font-style: italic;
+}
+
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick button {
+  background: #161e2e;
+  color: #c9d6e8;
+  border: 1px solid #26314a;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.quick button:hover:not(:disabled) {
+  border-color: #1f6feb;
+}
+.quick button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.composer {
+  display: flex;
+  gap: 8px;
+}
+
+.composer input {
+  flex: 1;
+  background: #0d1526;
+  border: 1px solid #26314a;
+  border-radius: 10px;
+  color: #e6edf3;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+.composer button {
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.composer button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+code {
+  background: #1c2740;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 0.92em;
+}
